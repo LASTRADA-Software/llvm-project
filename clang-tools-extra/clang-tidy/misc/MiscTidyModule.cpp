@@ -14,6 +14,7 @@
 #include "CoroutineHostileRAIICheck.h"
 #include "DefinitionsInHeadersCheck.h"
 #include "FixStdstringDataAccessCheck.h"
+#include "FixTypeConversionCheck.h"
 #include "HeaderIncludeCycleCheck.h"
 #include "IncludeCleanerCheck.h"
 #include "MisleadingBidirectional.h"
@@ -51,6 +52,8 @@ public:
         "misc-definitions-in-headers");
     CheckFactories.registerCheck<FixStdstringDataAccessCheck>(
         "misc-fix-stdstring-data-access");
+    CheckFactories.registerCheck<FixTypeConversionCheck>(
+        "misc-fix-type-conversion");
     CheckFactories.registerCheck<HeaderIncludeCycleCheck>(
         "misc-header-include-cycle");
     CheckFactories.registerCheck<IncludeCleanerCheck>("misc-include-cleaner");
